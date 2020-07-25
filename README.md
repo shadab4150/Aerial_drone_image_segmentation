@@ -16,7 +16,7 @@ The Semantic Drone Dataset focuses on semantic understanding of urban scenes for
 
 ![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/drone1.png)
 
-![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/drone2.png)
+![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/drone5.png)
 
 ![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/drone4.png)
 
@@ -34,6 +34,7 @@ The Semantic Drone Dataset focuses on semantic understanding of urban scenes for
 In the following example, different entities are classified.
 
 ![kd](https://divamgupta.com/assets/images/posts/imgseg/image15.png?style=centerme)
+
 
 ***
 
@@ -63,7 +64,8 @@ data = (SegmentationItemList.from_folder(path=path/'original_images')  # Locatio
         .normalize(imagenet_stats))            # Normalise with imagenet stats
 data.show_batch(rows=3)
 ```
-![kd]()
+***
+![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/data_block_drone.png)
 
 ***
 ## Model | unet_learner
@@ -80,3 +82,9 @@ data.show_batch(rows=3)
 * **This U-Net will sit on top of an encoder ( that can be a pretrained model -- eg. resnet50 ) and with a final output of num_classes.**
 
 ***
+
+### Results |
+
+Intial dynamic unet on top of an encoder ( resnet50 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **71.7 % ** .
+
+![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/results_drone.png)
