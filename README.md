@@ -81,10 +81,42 @@ data.show_batch(rows=3)
 
 * **This U-Net will sit on top of an encoder ( that can be a pretrained model -- eg. resnet50 ) and with a final output of num_classes.**
 
+```
+void_code = -1
+def accuracy_mask(input, target):
+    target = target.squeeze(1)
+    mask = target != void_code
+    return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
+
+arch =  pretrainedmodels.__dict__["resnet50"](num_classes=1000,pretrained="imagenet")
+
+learn = unet_learner(data, # DatBunch
+                     arch, # Backbone pretrained arch
+                     metrics = [metrics], # metrics
+                     wd = wd, bottle=True, # weight decay
+                     model_dir = '/kaggle/working/') # model directory to save
+```
+### Training :
+* Learning rate : Used fastai's lr_find() function to find an optimal learning rate.
+
+```
+learn.lr_find()
+learn.recoder.plot()
+```
+![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/lr_finder.png)
+
+```
+callbacks = SaveModelCallback(learn, monitor = 'accuracy_mask', every = 'improvement', name = 'best_model' )
+learn.fit_one_cycle(10, slice(lr), pct_start = 0.8, callbacks = [callbacks] )
+```
 ***
 
 ### Results |
 
 Intial dynamic unet on top of an encoder ( resnet50 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **71.7 % ** .
+```
+learn.show_results(rows=3, figsize=(12,16))
+
+```
 
 ![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/results_drone.png)
