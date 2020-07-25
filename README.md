@@ -113,7 +113,7 @@ learn.fit_one_cycle(10, slice(lr), pct_start = 0.8, callbacks = [callbacks] )
 
 ### Results |
 
-Intial dynamic unet on top of an encoder ( resnet50 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **71.7 % ** .
+Intial dynamic unet on top of an encoder ( resnet50 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **71.7%** .
 ```
 learn.show_results(rows=3, figsize=(12,16))
 
