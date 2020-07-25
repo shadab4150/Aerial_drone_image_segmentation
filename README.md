@@ -20,3 +20,63 @@ The Semantic Drone Dataset focuses on semantic understanding of urban scenes for
 
 ![kd](https://github.com/shadab4150/Aerial_drone_image_segmentation/blob/master/image_drone/drone4.png)
 
+***
+
+
+## What is semantic segmentation ?
+
+* Source: **https://divamgupta.com/image-segmentation/2019/06/06/deep-learning-semantic-segmentation-keras.html**
+
+* **Semantic image segmentation is the task of classifying each pixel in an image from a predefined set of classes.**
+
+***
+
+In the following example, different entities are classified.
+
+![kd](https://divamgupta.com/assets/images/posts/imgseg/image15.png?style=centerme)
+
+***
+
+
+In the above example, the pixels belonging to the bed are classified in the class “bed”, the pixels corresponding to the walls are labeled as “wall”, etc.
+
+In particular, our goal is to take an image of size W x H x 3 and generate a W x H matrix containing the predicted class ID’s corresponding to all the pixels.
+
+***
+![kd](https://divamgupta.com/assets/images/posts/imgseg/image14.png?style=centerme)
+
+***
+
+Usually, in an image with various entities, we want to know which pixel belongs to which entity, For example in an outdoor image, we can segment the sky, ground, trees, people, etc.
+
+
+***
+
+### Data block to feed the model
+* Created using fastai datablocks API.
+```
+data = (SegmentationItemList.from_folder(path=path/'original_images')  # Location from path
+        .split_by_rand_pct(0.1)                          # Split for train and validation set
+        .label_from_func(get_y_fn, classes=codes)      # Label from a above defined function
+        .transform(get_transforms(), size=src, tfm_y=True)   # If you want to apply any image Transform
+        .databunch(bs=4)                                   # Batch size  please decrese batch size if cuda out of memory
+        .normalize(imagenet_stats))            # Normalise with imagenet stats
+data.show_batch(rows=3)
+```
+![kd]()
+
+***
+## Model | unet_learner
+
+### Fastai's unet_learner
+* Source [**Fast.ai**](www.fast.ai)
+
+* This module builds a dynamic U-Net from any backbone **pretrained on ImageNet**, automatically inferring the intermediate sizes.
+
+![kd](https://docs.fast.ai/imgs/u-net-architecture.png)
+
+* **This is the original U-Net. The difference here is that the left part is a pretrained model.**
+
+* **This U-Net will sit on top of an encoder ( that can be a pretrained model -- eg. resnet50 ) and with a final output of num_classes.**
+
+***
