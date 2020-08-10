@@ -200,7 +200,7 @@ learn.fit_one_cycle(10, slice(lr), pct_start = 0.8, callbacks = [callbacks] )
       <td>00:12</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>11</td>
       <td>0.953422</td>
       <td>0.749664</td>
       <td>0.911884</td>
