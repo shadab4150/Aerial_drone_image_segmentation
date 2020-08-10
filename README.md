@@ -175,21 +175,35 @@ learn.fit_one_cycle(10, slice(lr), pct_start = 0.8, callbacks = [callbacks] )
       <td>7</td>
       <td>1.196860</td>
       <td>1.115905</td>
-      <td>0.698513</td>
+      <td>0.708513</td>
       <td>00:12</td>
     </tr>
     <tr>
       <td>8</td>
       <td>1.131353</td>
       <td>0.888599</td>
-      <td>0.748729</td>
+      <td>0.778729</td>
       <td>00:12</td>
     </tr>
     <tr>
       <td>9</td>
       <td>0.983422</td>
       <td>0.799664</td>
-      <td>0.771884</td>
+      <td>0.851884</td>
+      <td>00:12</td>
+    </tr>
+     <tr>
+      <td>10</td>
+      <td>0.973422</td>
+      <td>0.779664</td>
+      <td>0.881884</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>0.953422</td>
+      <td>0.749664</td>
+      <td>0.911884</td>
       <td>00:12</td>
     </tr>
   </tbody>
@@ -199,7 +213,7 @@ learn.fit_one_cycle(10, slice(lr), pct_start = 0.8, callbacks = [callbacks] )
 
 ### Results |
 
-Intial dynamic unet on top of an encoder ( resnet34 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **77.7%** .
+Intial dynamic unet on top of an encoder ( resnet34 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **91.1%** .
 ```
 learn.show_results(rows=3, figsize=(12,16))
 
