@@ -1,9 +1,6 @@
-<center><h1> A Tutorial for Beginners. </h1></center>
-
-***
 
 
-<center><h2> On How to train A neural network for image Segmentation using Fast.ai and Transfer Learning</h2></center>
+<center><h2> Training A neural network for image Segmentation using Fast.ai and Transfer Learning</h2></center>
 
 
 ***
