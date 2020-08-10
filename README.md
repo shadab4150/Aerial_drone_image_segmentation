@@ -111,6 +111,92 @@ learn.fit_one_cycle(10, slice(lr), pct_start = 0.8, callbacks = [callbacks] )
 ```
 ***
 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>drone_accuracy_mask</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>2.106114</td>
+      <td>1.835669</td>
+      <td>0.483686</td>
+      <td>00:16</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1.697477</td>
+      <td>1.331731</td>
+      <td>0.618320</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1.462504</td>
+      <td>1.227808</td>
+      <td>0.659259</td>
+      <td>00:13</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1.455247</td>
+      <td>1.147135</td>
+      <td>0.691440</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1.336305</td>
+      <td>1.115214</td>
+      <td>0.691359</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1.247270</td>
+      <td>1.168395</td>
+      <td>0.669359</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>1.310875</td>
+      <td>1.181834</td>
+      <td>0.672961</td>
+      <td>00:13</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>1.196860</td>
+      <td>1.115905</td>
+      <td>0.698513</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>1.131353</td>
+      <td>0.888599</td>
+      <td>0.748729</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>0.983422</td>
+      <td>0.799664</td>
+      <td>0.771884</td>
+      <td>00:12</td>
+    </tr>
+  </tbody>
+</table>
+
+***
+
 ### Results |
 
 Intial dynamic unet on top of an encoder ( resnet50 pretrained = 'imagenet' ), trained for 10 epochs gave an accuracy of **71.7%** .
