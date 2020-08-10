@@ -961,7 +961,7 @@ callbacks2 = SaveModelCallback(learn, monitor = 'drone_accuracy_mask', every = '
 
 
 ```python
-learn.fit_one_cycle(10, slice(1e-6), pct_start = 0.8,callbacks = [callbacks2] )
+learn.fit_one_cycle(12, slice(1e-6), pct_start = 0.8,callbacks = [callbacks2] )
 ```
 
 
@@ -1041,9 +1041,23 @@ learn.fit_one_cycle(10, slice(1e-6), pct_start = 0.8,callbacks = [callbacks2] )
     </tr>
     <tr>
       <td>9</td>
-      <td>0.670760</td>
-      <td>0.715871</td>
-      <td>0.798406</td>
+      <td>0.983422</td>
+      <td>0.799664</td>
+      <td>0.851884</td>
+      <td>00:12</td>
+    </tr>
+     <tr>
+      <td>10</td>
+      <td>0.973422</td>
+      <td>0.779664</td>
+      <td>0.881884</td>
+      <td>00:12</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>0.953422</td>
+      <td>0.749664</td>
+      <td>0.911884</td>
       <td>00:12</td>
     </tr>
   </tbody>
