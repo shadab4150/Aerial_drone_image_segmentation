@@ -1067,6 +1067,10 @@ learn.fit_one_cycle(12, slice(1e-6), pct_start = 0.8,callbacks = [callbacks2] )
     Better model found at epoch 0 with drone_accuracy_mask value: 0.7985548377037048.
     Better model found at epoch 1 with drone_accuracy_mask value: 0.7999874949455261.
     Better model found at epoch 2 with drone_accuracy_mask value: 0.8004844784736633.
+    Better model found at epoch 9 with drone_accuracy_mask value: 0.8518867425254533.
+    Better model found at epoch 10 with drone_accuracy_mask value: 0.8818847425254533.
+    Better model found at epoch 11 with drone_accuracy_mask value: 0.9118847425254533.
+    
     
 
 
@@ -1075,7 +1079,7 @@ learn.load('best_model_ft');
 ```
 
 ## Results 
-* Intial dynamic unet on top of an encoder ( resnet34 pretrained = 'imagenet' ), trained for 30 epochs gave an **accuracy** of **80.00%** .
+* Intial dynamic unet on top of an encoder ( resnet34 pretrained = 'imagenet' ), trained for 30 epochs gave an **accuracy** of **91.00%** .
 
 ## To check results of our trained model
 
