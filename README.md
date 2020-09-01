@@ -11,7 +11,7 @@ The Semantic Drone Dataset focuses on semantic understanding of urban scenes for
 ***
 | Task | Colab
 |---|---|
-| [**`Colab Notebook for Aerial Semantic Segmentation : Running yourself`**] | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BXoew0VpMxWu1a0RKoV18iqz9SkkfnrI?usp=sharing)
+| **`Colab Notebook for Aerial Semantic Segmentation : Running yourself`** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BXoew0VpMxWu1a0RKoV18iqz9SkkfnrI?usp=sharing)
 
 #### Aerial Semantic Segmentation Drone Sample Images with mask
 
