@@ -9,8 +9,9 @@
 The Semantic Drone Dataset focuses on semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images.
 
 ***
-
-## Colab Notebook for Running yourself [**kernel**](https://colab.research.google.com/drive/1BXoew0VpMxWu1a0RKoV18iqz9SkkfnrI?usp=sharing)
+| Task | Colab
+|---|---|
+| [**`Colab Notebook for Aerial Semantic Segmentation : Running yourself`**] | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BXoew0VpMxWu1a0RKoV18iqz9SkkfnrI?usp=sharing)
 
 #### Aerial Semantic Segmentation Drone Sample Images with mask
 
