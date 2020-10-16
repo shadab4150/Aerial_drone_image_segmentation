@@ -36,7 +36,7 @@ The Semantic Drone Dataset focuses on semantic understanding of urban scenes for
 
 In the following example, different entities are classified.
 
-![kd](https://divamgupta.com/assets/images/posts/imgseg/image15.png?style=centerme)
+![image](https://divamgupta.com/assets/images/posts/imgseg/image15.png?style=centerme)
 
 
 ***
